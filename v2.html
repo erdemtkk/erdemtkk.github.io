@@ -1,0 +1,164 @@
+
+
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="panel/css/stylesheet2.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Linkvertise Bypasser V2</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://www.bypasser.cf/wall.jpg'); background-size:cover; overflow: hidden;">
+        
+<div class="container">
+    
+    <div onload="default_page()" class="panel">
+        <div class="topbar">
+            <div class="left">
+                
+            </div>
+        
+            <div class="right">
+                <a href="logout" style="text-decoration: none;color: inherit;"><span><i class="bi bi-arrow-bar-left"></i> admin</span></a>
+            </div>
+        </div>
+        <hr>
+        <div class="content">
+            <div class="sidemenu">
+                <button id="changelogb" onclick="changePage('changelog')">📰News</button>
+                <button id="accountb" onclick="changePage('account')">🤵Account</button>
+                <button id="settingsb" onclick="changePage('settings')">✅Bypasser</button>
+                <button id="staffappsb" onclick="changePage('staffapp')">⚙️Settings</button>
+            </div>
+            <div class="pages">
+                <div class="page" id="changelog" style="display: none;"> 
+                
+                   <div class="changelogitem">
+                        <div class="date">13/03/2022</div>
+                        <div class="clcontent">
+                            <div class="title">Error</div>
+                            <div class="type new">Unknown Error</div>
+                            <div class="clbody">Version2 Linkvertise Bypasser was not working but now it works perfectly. Fixed!</div>
+                        </div>
+                    </div>
+                    
+                    <div class="changelogitem">
+                        <div class="date">16/11/2021</div>
+                        <div class="clcontent">
+                            <div class="title">Website Update</div>
+                            <div class="type fix">New Design</div>
+                            <div class="clbody">Changed https://bypasser.cf/v2 design.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="changelogitem">
+                        <div class="date">28/05/2021</div>
+                        <div class="clcontent">
+                            <div class="title">Website Update</div>
+                            <div class="type improvement">Improvement</div>
+                            <div class="clbody">Updated Website Design.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="changelogitem">
+                        <div class="date">26/05/2021</div>
+                        <div class="clcontent">
+                            <div class="title">New Tool</div>
+                            <div class="type new">First Release #1</div>
+                            <div class="clbody">Starting a new project named Bypasser.</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="page" id="account" style="display: none;">
+                    <span class="pgheader">🤵User Details</span>
+                    <div class="card">
+                        <span class="title">Email</span>
+                        <input class="textbox" style="width: 100%;" type="username" readonly name="email" placeholder="Email Address" value='free@bypasser.cf'>
+                    </div>
+                    <div class="card">
+                        <span class="title">Username</span>
+                        <input class="textbox" style="width: 100%;" type="username" readonly name="username" placeholder="Username" value='bypassercf2022'>
+                    </div>
+                    
+                    <div class="card">
+                        <span class="title">Licence Key</span>
+                        <input class="textbox" style="width: 100%;" type="username" readonly placeholder="" value='BYPASSERCF2022'>
+                    </div>
+                  
+                    
+                    <div class="card">
+                        <span class="title">Website Status</span>
+                        <input class="textbox" style="width: 100%;" type="username" readonly name="creationdate" placeholder="Account Creation Date" value='Stable & Fast'>
+                    </div>
+                    
+                    <hr>
+                    <span class="pgheader">Premium Information</span>
+                    <div class="card">
+                        <span class="title">Is Premium Account?</span>
+                        <input class="textbox" style="width: 100%;" type="username" readonly name="licencekey" placeholder="No" value="">
+                    </div>
+                </div>
+                
+                <div class="page" id="staffapp" style="display: none;"> 
+                    <text style="font-size: 14px;">⚙️Coming Soon</text>
+                    <div class="card" style="">
+                 
+                    </div>
+                </div>
+                
+                <div class="page" id="settings" style="display: none;"> 
+                    <span class="pgheader">✅Linkvertise Bypasser</span>
+                    <div class="card">
+                            <input class="textbox" style="width: calc(100% - 70px);margin-right: 18px;" id="input_link" placeholder="Paste your Linkvertise URL..."><br>
+                            <button class="btn" name="redeem_license" id="submit_btn" onclick="start()">Bypass</button>
+<h5 class="info-text">
+<div class="col-xl-9 mx-auto">
+<a href="#" id="results"></a>
+</div>
+</h5>
+                    </div>
+                    
+ 
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="footer">
+            Copyright © Bypasser.cf 2022
+        </div>
+        
+        <div class="bg-animation" style="pointer-events: none;">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+        </div>
+    </body>
+    <script></script>
+    <script>
+        window.onload = function(){
+            changePage("settings");
+        };
+    </script>
+<script>
+            function changePage(page){
+                var i;
+                var x = document.getElementsByClassName("page");
+                for (i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+                document.getElementById(page).style.display = "inline-block";
+            }
+        </script>
+<script type="text/javascript" src="j.js"></script>
+
+</html>

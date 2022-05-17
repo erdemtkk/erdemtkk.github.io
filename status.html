@@ -1,0 +1,46 @@
+<html>
+ <head>
+  <title> Bypasser Status CF1.5.0</title>
+ </head>
+ <body>
+Server Status {
+ <br>
+<h2 style="color: green">online</h2>
+  <br>
+}
+ <br>
+ <br>
+API Status {
+  <br>
+<h2 style="color: green">online</h2>
+  <br>
+}
+ <br>
+ <br>
+ Developer Status {
+ <br>
+ <h2 style="color: blue">Monthly Updating & Fixing Bugs ,Busy</h2>
+  <br>
+ }
+  <br>
+  <br>
+<input type="button" onclick="pingServer();" value="Ping Server">
+  
+  <script>
+  function pingServer(){
+  a = 5;
+  var packet = "/ping";
+  
+   if (a < 6){
+    alert("Online! Version 2.0");
+    window.location.reload(true)
+    } else
+  alert("Offline! Sad");
+  window.location.reload(true)
+  }
+   
+   
+  </script>
+  <script src="cookies.js"></script>
+ </body>
+</html>
